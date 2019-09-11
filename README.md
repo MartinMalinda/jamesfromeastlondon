@@ -1,4 +1,4 @@
-# jamesfromeastlondon (CHAMA RETRO)
+# James Dang chama prague retros
 
 ## Week-01
 ### Day 2 (Introduction, internet basics, Your first website)
