@@ -28,11 +28,12 @@ namespace GreenFox
                 topRow ++;
             }
             Console.WriteLine();
+            // Prints top row then line break
                 
             int middleRowCount = 0;
-            string middleRow = "%".PadRight(userInput-1);
+            string middleRow = "%".PadRight(userInput - 1);
 
-            while (middleRowCount < userInput-2)
+            while (middleRowCount < userInput - 2)
             {
                 Console.Write(middleRow);
                 Console.WriteLine("%");
