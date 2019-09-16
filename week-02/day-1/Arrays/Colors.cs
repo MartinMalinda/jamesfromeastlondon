@@ -21,9 +21,9 @@ namespace Colors
             new string[] { "orchid", "violet", "pink", "hot pink"}
             };
 
-            for (int row = 0; row < colors.Length; row++)
+            for (int row = 0; row < colors.Length; row++) // rows = 3
             {
-                for (int column = 0; column < colors[row].Length; column++)
+                for (int column = 0; column < colors[row].Length; column++) // columns in row == varies
                 {
                     Console.Write(colors[row][column] + ", ");
                 }
