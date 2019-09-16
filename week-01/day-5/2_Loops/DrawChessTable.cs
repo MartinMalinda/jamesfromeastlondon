@@ -23,7 +23,6 @@ namespace GreenFox
                 if (row % 2 == 0)
                 {
                     Console.WriteLine("% % % %");
-
                 }
                 else
                 {
