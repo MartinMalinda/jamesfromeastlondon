@@ -14,7 +14,7 @@ namespace DoubleItems
 
             for (int row = 0; row < numList.GetLength(0); row++)
             {
-                Console.WriteLine(numList[row]*2);
+                Console.WriteLine(numList[row] * 2);
             }
 
             Console.ReadLine();
