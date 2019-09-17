@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Reverse
+namespace List
 {
-    public class ReverseProgram
+    public class ListIntroduction1
     {
         public static void Main(string[] args)
         {
