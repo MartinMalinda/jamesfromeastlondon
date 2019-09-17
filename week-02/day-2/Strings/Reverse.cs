@@ -7,7 +7,7 @@ namespace Reverse
         public static string Reverse(string str)
         {
             char[] charArray = str.ToCharArray();
-            Array.Reverse(charArray );
+            Array.Reverse(charArray);
             return new string (charArray);
         }
         public static void Main(string[] args)
