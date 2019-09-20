@@ -20,24 +20,29 @@ namespace DrawingApplication
             // Line play
             // https://github.com/green-fox-academy/chama-retros-syllabus/blob/master/project/drawing/r1.png
 
-            canvas.Width = 150;
-            canvas.Height = 150;
-            foxDraw.SetBackgroundColor(Colors.Pink);
+            canvas.Width = 300;
+            canvas.Height = 300;
             line(foxDraw);
         }
            
         public void line(FoxDraw foxdraw)
         {
             foxdraw.SetStrokeThicknes(1);
-            foxdraw.SetStrokeColor(Colors.Green);
 
-            for (int i = 10; i < 150; i+=10)
+            for (int i = 20; i < 300; i += 20) // Lines Top Left
             {
-                var startPoint = new Point (0, i);
-                var endPoint = new Point (i, 150);
+                var startPoint = new Point(0, i);
+                var endPoint = new Point(i, 300);
+                foxdraw.SetStrokeColor(Colors.Green);
                 foxdraw.DrawLine(startPoint, endPoint);
             }
-            
+            for (int i = 20; i < 300; i += 20) // Lines Top Right
+            {
+                var startPointTwo = new Point(i, 0);
+                var endPointTwo = new Point(300, i);
+                foxdraw.SetStrokeColor(Colors.Purple);
+                foxdraw.DrawLine(startPointTwo, endPointTwo);
+            }
         }
 
         private void InitializeComponent()
