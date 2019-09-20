@@ -23,10 +23,10 @@ namespace DrawingApplication
             canvas.Width = 300;
             canvas.Height = 300;
             foxDraw.SetBackgroundColor(Colors.WhiteSmoke);
-            line(foxDraw, 150);
+            Line(foxDraw, 150);
         }
            
-        public void line(FoxDraw foxdraw, int quarter)
+        public void Line(FoxDraw foxdraw, int quarter)
         {
             foxdraw.SetStrokeThicknes(1);
             foxdraw.SetStrokeColor(Colors.Green);

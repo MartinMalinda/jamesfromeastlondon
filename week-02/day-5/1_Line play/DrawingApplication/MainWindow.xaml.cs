@@ -22,10 +22,10 @@ namespace DrawingApplication
 
             canvas.Width = 300;
             canvas.Height = 300;
-            line(foxDraw);
+            Line(foxDraw);
         }
            
-        public void line(FoxDraw foxdraw)
+        public void Line(FoxDraw foxdraw)
         {
             foxdraw.SetStrokeThicknes(1);
 

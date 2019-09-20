@@ -22,11 +22,11 @@ namespace DrawingApplication
 
             canvas.Width = 200;
             canvas.Height = 200;
-            foxDraw.SetBackgroundColor(Colors.WhiteSmoke);
-            triangle(foxDraw, 10);
+
+            Triangle(foxDraw, canvas, 10);
         }
            
-        public void triangle(FoxDraw foxdraw, int lineLength)
+        public void Triangle(FoxDraw foxdraw, Canvas canvas, int lineLength)
         {
             foxdraw.SetStrokeThicknes(1);
             foxdraw.SetStrokeColor(Colors.Black);
@@ -37,16 +37,18 @@ namespace DrawingApplication
                 var endPoint = new Point(105 + i/2, lineLength + i);
                 foxdraw.DrawLine(startPoint, endPoint);
             }
-            for (int i = 0; i < 200; i += 10) // Lines Diagonal Left
+
+            for (int i = 0; i < 200; i += 10) // Lines Diagonal | Left to Right
             {
-                var startPoint = new Point(i, 200);
+                var startPoint = new Point(i, canvas.Height);
                 var endPoint = new Point(100 + i/2, i);
                 foxdraw.DrawLine(startPoint, endPoint);
             }
-            for (int i = 0; i <= 200; i += 10) // Lines Diagonal Right
+
+            for (int i = 0; i <= 200; i += 10) // Lines Diagonal | Right to Left
             {
-                var startPoint = new Point(i, 200);
-                var endPoint = new Point(0 + i/2, 200 - i);
+                var startPoint = new Point(i, canvas.Height);
+                var endPoint = new Point(0 + i/2, canvas.Height - i);
                 foxdraw.DrawLine(startPoint, endPoint);
             }
         }
