@@ -8,11 +8,6 @@ namespace OOP
         public string text { get; set; }
         public string publicationDate { get; set; }
 
-        public BlogPost()
-        {
-
-        }
-
         public BlogPost(string authorName, string title, string text, string publicationDate)
         {
             this.authorName = authorName;

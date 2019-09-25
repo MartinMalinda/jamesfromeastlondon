@@ -7,11 +7,6 @@ namespace OOP
         public float width { get; set; }
         public float inkAmount { get; set; } = 100f;
 
-        public Sharpie()
-        {
-
-        }
-
         public Sharpie(string color, float width)
         {
             this.color = color;

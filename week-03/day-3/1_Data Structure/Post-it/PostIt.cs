@@ -7,11 +7,6 @@ namespace OOP
         public string text { get; set; }
         public string textColor { get; set; }
 
-        public PostIt()
-        {
-
-        }
-
         public PostIt(string backgroundColor, string text, string textColor)
         {
             this.backgroundColor = backgroundColor;

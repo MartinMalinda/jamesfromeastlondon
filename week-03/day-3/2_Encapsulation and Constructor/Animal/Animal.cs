@@ -6,11 +6,6 @@ namespace OOP
         public int hunger { get; set; } = 50;
         public int thirst { get; set; } = 50;
 
-        public Animal()
-        {
-
-        }
-
         public Animal(int hunger, int thirst)
         {
             this.hunger = hunger;
