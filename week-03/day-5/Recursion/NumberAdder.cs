@@ -2,7 +2,7 @@ using System;
 
 namespace Recursion
 {
-    public class NumberAdder
+    public class NumberAdderTask
     {
         public static void Main(string[] args)
         {
@@ -10,16 +10,16 @@ namespace Recursion
 
             uint n = Convert.ToUInt32(Console.ReadLine());
             
-            Console.WriteLine(NumberAdd(n));
+            Console.WriteLine(NumberAdder(n));
         }
-        public static uint NumberAdd(uint n)
+        public static uint NumberAdder(uint n)
         {
            
             if (n == 0)
             {
                 return 0;
             }
-                return n + NumberAdd(n - 1);
+                return n + NumberAdder(n - 1);
         }
     }
 }
