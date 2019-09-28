@@ -14,12 +14,11 @@ namespace Recursion
         }
         public static uint NumberAdder(uint n)
         {
-           
             if (n == 0)
             {
                 return 0;
             }
-                return n + NumberAdder(n - 1);
+            return n + NumberAdder(n - 1);
         }
     }
 }
