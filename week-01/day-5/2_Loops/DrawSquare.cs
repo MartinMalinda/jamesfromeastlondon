@@ -19,34 +19,24 @@ namespace GreenFox
             //
             // The square should have as many lines as the number was
             Console.WriteLine("How many lines tall will your square be?");
-            int userInput = Convert.ToInt32(Console.ReadLine());
+            int number = Convert.ToInt32(Console.ReadLine());
 
-            int topRow = 0;
-            while (topRow < userInput)
+            for (int row = 1; row <= number; row++)
             {
-                Console.Write("%");
-                topRow ++;
+                for (int col = 1; col <= number;  col++)
+                {
+                    if (row == 1 || row == number ||
+                        col == 1 || col == number)
+                    {
+                        Console.Write("%");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                }
+                Console.WriteLine();
             }
-            Console.WriteLine();
-            // Prints top row then line break
-                
-            int middleRowCount = 0;
-            string middleRow = "%".PadRight(userInput - 1);
-
-            while (middleRowCount < userInput - 2)
-            {
-                Console.Write(middleRow);
-                Console.WriteLine("%");
-                middleRowCount ++;
-            }
-
-            int bottomRow = 0;
-            while (bottomRow < userInput)
-            {
-                Console.Write("%");
-                bottomRow++;
-            }
-
         }
     }
 }
