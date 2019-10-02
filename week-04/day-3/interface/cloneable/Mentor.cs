@@ -1,5 +1,5 @@
 ﻿using System;
-namespace inheritance_exercise
+namespace cloneable
 {
     public class Mentor : Person
     {
