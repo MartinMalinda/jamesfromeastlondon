@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sum", "Sum\Sum.csproj", "{F36485E4-F666-44F4-ABC1-D27C1622CFC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{4BC8AFD3-64EF-4412-8CA4-A6B5E94609FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F36485E4-F666-44F4-ABC1-D27C1622CFC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F36485E4-F666-44F4-ABC1-D27C1622CFC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F36485E4-F666-44F4-ABC1-D27C1622CFC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F36485E4-F666-44F4-ABC1-D27C1622CFC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BC8AFD3-64EF-4412-8CA4-A6B5E94609FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BC8AFD3-64EF-4412-8CA4-A6B5E94609FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BC8AFD3-64EF-4412-8CA4-A6B5E94609FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BC8AFD3-64EF-4412-8CA4-A6B5E94609FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
