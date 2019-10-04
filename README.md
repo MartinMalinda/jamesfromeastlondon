@@ -13,5 +13,8 @@ Git Forked Repo: [patchwork](https://github.com/jamesfromeastlondon/patchwork)
 
 Git Task Repo: [git lesson](https://github.com/jamesfromeastlondon/git-lesson-repository)
 
+## Week-04
+Project: [TODO Application](https://github.com/jamesfromeastlondon/todo-app 
+
 ## Class syllabus
 This is the CHAMA RETRO class [syllabus](https://github.com/green-fox-academy/chama-retros-syllabus)
