@@ -12,10 +12,10 @@ namespace Reverse
             // - Print the elements of the reversed `aj`
 
             int[] aj = { 3, 4, 5, 6, 7 };
-
-            for (int row = 4; row >= 0; row--) // Start: 4, End: 0 
+            
+            for (int i = aj.Length - 1; i > -1; i--)
             {
-                Console.WriteLine(aj[row]);
+                Console.WriteLine(aj[i]);
             }
 
             Console.ReadLine();
