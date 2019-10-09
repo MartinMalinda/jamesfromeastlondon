@@ -16,5 +16,8 @@ Git Task Repo: [git lesson](https://github.com/jamesfromeastlondon/git-lesson-re
 ## Week-04
 Project: [TODO Application](https://github.com/jamesfromeastlondon/todo-app) 
 
+## Week-05
+Project: [Wanderer Game](https://github.com/jamesfromeastlondon/wanderer-cs)
+
 ## Class syllabus
 This is the CHAMA RETRO class [syllabus](https://github.com/green-fox-academy/chama-retros-syllabus)
