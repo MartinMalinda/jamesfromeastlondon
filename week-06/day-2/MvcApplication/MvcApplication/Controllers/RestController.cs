@@ -20,9 +20,9 @@ namespace MvcApplication.Controllers
 
         [Route("greeting")]
         [HttpGet]
-        public Greeting greeting()
+        public Greeting Greeting(string name)
         {
-            Greeting greet = new Greeting(1, "Hello, World!");
+            Greeting greet = new Greeting(1, $"Hello, {name}!");
             return greet;
         }
     }
