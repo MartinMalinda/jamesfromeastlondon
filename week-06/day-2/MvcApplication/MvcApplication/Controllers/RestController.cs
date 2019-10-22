@@ -13,12 +13,12 @@ namespace MvcApplication.Controllers
     public class RestController : Controller
     {
         // GET: /<controller>/
+        public static long counter;
         public IActionResult Index()
         {
             return View();
         }
 
-        static long counter;
         [Route("greeting")]
         [HttpGet]
         public Greeting Greeting(string name)

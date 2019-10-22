@@ -11,5 +11,8 @@ namespace MvcApplication.Models
             Id = id;
             Content = content;
         }
+        public Greeting()
+        {
+        }
     }
 }
