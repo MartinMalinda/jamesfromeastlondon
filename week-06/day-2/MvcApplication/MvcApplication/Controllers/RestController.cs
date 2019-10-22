@@ -18,11 +18,12 @@ namespace MvcApplication.Controllers
             return View();
         }
 
+        static long counter;
         [Route("greeting")]
         [HttpGet]
         public Greeting Greeting(string name)
         {
-            Greeting greet = new Greeting(1, $"Hello, {name}!");
+            Greeting greet = new Greeting(counter++, $"Hello, {name}!");
             return greet;
         }
     }
