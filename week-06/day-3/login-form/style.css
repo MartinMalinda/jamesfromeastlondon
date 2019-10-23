@@ -1,0 +1,82 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #dbdbdb;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family:'comfortaa', courier;
+}
+
+.container{
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 5px;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+.form-row{
+    text-align: left;
+}
+
+.form-row label{
+    font-size: 12px;
+    align-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.form-row input{
+    width: 30vw;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid #dbdbdb;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.form-row input:focus{
+    outline: 2px solid #0F0;
+    box-shadow: none;
+}
+
+.form-row [type="password"]{
+    background: url(assets/noun_Eye_1309855.svg) no-repeat;
+    background-position-y: 3px;
+    background-position-x: right;
+}
+
+.form-row [type="password"]:focus{
+    background: none;
+}
+
+a{
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color:black;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+button{
+    font-family:'comfortaa', courier;
+    color: white;
+    background-color: rgb(59, 59, 59);
+    border: none;
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
