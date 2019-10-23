@@ -46,7 +46,9 @@ h2 {
 }
 
 .form-row input:focus{
-    outline: 2px solid #0F0;
+    outline: none;
+    border-radius: 2px;
+    border: 1px solid #000;
     box-shadow: none;
 }
 
@@ -58,6 +60,12 @@ h2 {
 
 .form-row [type="password"]:focus{
     background: none;
+}
+
+.form-row input[type="text"]:valid,
+.form-row input[type="password"]:valid{
+    border-radius: 2px;
+    border: 1px solid #0F0;
 }
 
 a{
