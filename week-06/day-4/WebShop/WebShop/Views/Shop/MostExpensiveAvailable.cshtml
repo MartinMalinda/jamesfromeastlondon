@@ -24,27 +24,7 @@
             </form>
         </section>
         <section>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>Quantity of stock</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in @Model)
-                    {
-                        <tr>
-                            <td>@item.Name</td>
-                            <td>@item.Description</td>
-                            <td>@item.Price</td>
-                            <td>@item.QuantityOfStock</td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+            <h2>@ViewData["expensiveAvailable"] is the most expensive available item.</h2>
         </section>
     </div>
 </body>

@@ -7,16 +7,16 @@
 <body>
     <div class ='container'>
         <header>
-            <h1>My Shop</h1>
+            <a asp-controller="Shop" asp-action="Index"><h1>WebShop</h1></a>
         </header>
         <nav>
-            <button type="button">ONLY AVAILABLE</button>
-            <button type="button">CHEAPEST FIRST</button>
-            <button type="button">CONTAINS NIKE</button>
-            <button type="button">AVERAGE STOCK</button>
-            <button type="button">MOST EXPENSIVE AVAILABLE</button>
+            <button type="button"><a asp-controller="Shop" asp-action="OnlyAvailable">ONLY AVAILABLE</a></button>
+            <button type="button"><a asp-controller="Shop" asp-action="CheapestFirst">CHEAPEST FIRST</a></button>
+            <button type="button"><a asp-controller="Shop" asp-action="ContainsNike">CONTAINS NIKE</a></button>
+            <button type="button"><a asp-controller="Shop" asp-action="AverageStock">AVERAGE STOCK</a></button>
+            <button type="button"><a asp-controller="Shop" asp-action="MostExpensiveAvailable">MOST EXPENSIVE AVAILABLE</a></button>
         </nav>
-        <section>x
+        <section>
             <form action="" method="POST">
                 <label for="search">Search for:</label>
                 <input id="search" name="search" type="text" placeholder="Type here ...">

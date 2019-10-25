@@ -30,5 +30,31 @@ namespace WebShop.Controllers
             var AvailableList = ShopItemList.Where(s => s.QuantityOfStock > 0).ToList();
             return View(AvailableList);
         }
+
+        public IActionResult CheapestFirst()
+        {
+            var CheapestFirstList = ShopItemList.OrderBy(s => s.Price).ToList();
+            return View(CheapestFirstList);
+        }
+
+        public IActionResult ContainsNike()
+        {
+            var ContainsNikeList = ShopItemList.Where(s => s.Name.Contains("Nike")).ToList();
+            return View(ContainsNikeList);
+        }
+
+        public IActionResult AverageStock()
+        {
+            var AverageStockList = ShopItemList.Select(s => s.QuantityOfStock).ToList();
+            ViewData["avgStock"] = AverageStockList.Average().ToString();
+            return View();
+        }
+
+        public IActionResult MostExpensiveAvailable()
+        {
+            var MostExpensiveAvailableItem = ShopItemList.Where(s => s.QuantityOfStock > 0).OrderByDescending(s => s.Price).First();
+            ViewData["expensiveAvailable"] = MostExpensiveAvailableItem.Name;
+            return View();
+        }
     }
 }
