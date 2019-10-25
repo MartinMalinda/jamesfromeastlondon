@@ -24,5 +24,11 @@ namespace WebShop.Controllers
         {
             return View(ShopItemList);
         }
+
+        public IActionResult OnlyAvailable()
+        {
+            var AvailableList = ShopItemList.Where(s => s.QuantityOfStock > 0).ToList();
+            return View(AvailableList);
+        }
     }
 }
