@@ -13,16 +13,18 @@
                 <th>Balance</th>
                 <th>Animal Type</th>
                 <th>Index Position</th>
+                <th>Is King?</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var account in @Model)
             {
-            <tr>
+            <tr @if (account.IsKing) { <text>class="isKing"</text> } >
                 <td>@account.Name</td>
                 <td>@(Math.Round(account.Balance, 2)) Twigs</td>
                 <td>@account.AnimalType</td>
                 <td>@(accountIndex++)</td>
+                <td>@(account.IsKing ? "Yes" : "No")</td>
             </tr>
             }
         </tbody>

@@ -19,3 +19,7 @@ td:nth-child(2) {
     text-align: right;
     padding-right: 50px;
 }
+
+.isKing {
+    background-color: gold;
+}
