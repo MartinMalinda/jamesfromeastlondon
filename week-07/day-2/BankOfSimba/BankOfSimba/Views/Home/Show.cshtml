@@ -33,5 +33,14 @@
 </table>
 
 <form method="post">
+    <section>
+        <label for="name">Name:</label>
+        <input id="name" name="name" type="text"/>
+        <label for="animalType">Animal Type:</label>
+        <input id="animalType" name="animalType" type="text"/>
+        <label for="isKing">Is King?</label>
+        <input id="isKing" name="isKing" type="checkbox"/>
+        <button type="submit" asp-controller="Home" asp-action="AddAccount">Add Account</button>
+    </section>
     <button type="submit" asp-controller="Home" asp-action="RaiseBalance">Raise Balance</button>
 </form>

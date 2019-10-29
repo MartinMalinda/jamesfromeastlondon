@@ -16,7 +16,7 @@ namespace BankOfSimba.Controllers
             new BankAccount ( "Mufasa", 100.00m, "Lion", true),
             new BankAccount ( "Timon", 10.00m, "Meerkat", false),
             new BankAccount ("Pumba", 12.50m, "Warthog", false),
-            new BankAccount ("Ed", 4.00m, "Hyena", false)
+            new BankAccount ("Ed", 4.00m, "Hyena", false),
         };
 
         public IActionResult Index()
@@ -46,6 +46,13 @@ namespace BankOfSimba.Controllers
                 } 
                 account.Balance += raiseValue;
             }
+            return RedirectToAction("Show");
+        }
+
+        public IActionResult AddAccount (string name, string animalType, bool isKing)
+        {
+            BankAccount NewAccount = new BankAccount(name, 0.00m, animalType, isKing);
+            accountDetails.Add(NewAccount);
             return RedirectToAction("Show");
         }
 
