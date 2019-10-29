@@ -6,29 +6,32 @@
     ViewData["Title"] = "Show";
 }
 
-    <table>
-        <thead>
-            <tr>
-                <th>Account Holder</th>
-                <th>Balance</th>
-                <th>Animal Type</th>
-                <th>Index Position</th>
-                <th>Is King?</th>
-                <th>Good or Bad?</th>
+<table>
+    <thead>
+        <tr>
+            <th>Account Holder</th>
+            <th>Balance</th>
+            <th>Animal Type</th>
+            <th>Index Position</th>
+            <th>Is King?</th>
+            <th>Good or Bad?</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var account in @Model)
+        {
+            <tr @if (account.IsKing) { <text>class="isKing"</text> } >
+                <td>@account.Name</td>
+                <td>@(Math.Round(account.Balance, 2)) Twigs</td>
+                <td>@account.AnimalType</td>
+                <td>@(accountIndex++)</td>
+                <td>@(account.IsKing ? "Yes" : "No")</td>
+                <td>@(account.AnimalType == "Hyena" ? "Bad one" : "Good one")</td>
             </tr>
-        </thead>
-        <tbody>
-            @foreach (var account in @Model)
-            {
-                <tr @if (account.IsKing) { <text>class="isKing"</text> } >
-                    <td>@account.Name</td>
-                    <td>@(Math.Round(account.Balance, 2)) Twigs</td>
-                    <td>@account.AnimalType</td>
-                    <td>@(accountIndex++)</td>
-                    <td>@(account.IsKing ? "Yes" : "No")</td>
-                    <td>@(account.AnimalType == "Hyena" ? "Bad one" : "Good one")</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+        }
+    </tbody>
+</table>
 
+<form method="post">
+    <button type="submit" asp-controller="Home" asp-action="RaiseBalance">Raise Balance</button>
+</form>

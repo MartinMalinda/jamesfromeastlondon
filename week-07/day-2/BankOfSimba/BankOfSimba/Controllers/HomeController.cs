@@ -35,6 +35,20 @@ namespace BankOfSimba.Controllers
             return View();
         }
 
+        public IActionResult RaiseBalance ()
+        {
+            foreach (var account in accountDetails)
+            {
+                decimal raiseValue = 10.00m;
+                if (account.IsKing)
+                {
+                    raiseValue = 100.00m;
+                } 
+                account.Balance += raiseValue;
+            }
+            return RedirectToAction("Show");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
