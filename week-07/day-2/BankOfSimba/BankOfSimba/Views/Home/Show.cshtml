@@ -14,6 +14,7 @@
                 <th>Animal Type</th>
                 <th>Index Position</th>
                 <th>Is King?</th>
+                <th>Good or Bad?</th>
             </tr>
         </thead>
         <tbody>
@@ -25,7 +26,20 @@
                 <td>@account.AnimalType</td>
                 <td>@(accountIndex++)</td>
                 <td>@(account.IsKing ? "Yes" : "No")</td>
+                <td>@switch (account.AnimalType)
+                {
+                    case "Hyena":
+                        <text>Bad one</text>
+                        break;
+                    case "Lion":
+                        <text>Good one</text>
+                        break;
+                    default:
+                        <text>Good one</text>
+                        break;
+                }</td>
             </tr>
             }
         </tbody>
     </table>
+
