@@ -1,0 +1,25 @@
+﻿@model List<BankAccount>
+
+@{
+    ViewData["Title"] = "Show";
+}
+
+@foreach (var account in @Model)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Account Holder</th>
+                <th>Balance</th>
+                <th>Animal Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@account.Name</td>
+                <td>@(Math.Round(account.Balance, 2)) Twigs</td>
+                <td>@account.AnimalType</td>
+            </tr>
+        </tbody>
+    </table>
+} 
