@@ -56,5 +56,16 @@ namespace WebShop.Controllers
             ViewData["expensiveAvailable"] = MostExpensiveAvailableItem.Name;
             return View();
         }
+
+        [HttpPost]
+        public IActionResult SearchBar(string search = null)
+        {
+            if (!string.IsNullOrEmpty(search))
+            {
+                var searchName = ShopItemList.Where(s => s.Name.Contains(search) || s.Description.Contains(search)).ToList();
+                return View(searchName);
+            }
+            return View(ShopItemList);
+        }
     }
 }
