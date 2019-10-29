@@ -4,8 +4,6 @@
     ViewData["Title"] = "Show";
 }
 
-@foreach (var account in @Model)
-{
     <table>
         <thead>
             <tr>
@@ -15,11 +13,13 @@
             </tr>
         </thead>
         <tbody>
+            @foreach (var account in @Model)
+            {
             <tr>
                 <td>@account.Name</td>
                 <td>@(Math.Round(account.Balance, 2)) Twigs</td>
                 <td>@account.AnimalType</td>
             </tr>
+            }
         </tbody>
     </table>
-} 

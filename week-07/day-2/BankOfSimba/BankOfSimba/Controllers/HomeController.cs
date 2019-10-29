@@ -12,7 +12,11 @@ namespace BankOfSimba.Controllers
     {
         static List<BankAccount> accountDetails = new List<BankAccount>()
         {
-            new BankAccount ( "Simba", 50.00m, "Lion" )
+            new BankAccount ( "Simba", 50.00m, "Lion" ),
+            new BankAccount ( "Mufasa", 100.00m, "Lion"),
+            new BankAccount ( "Timon", 10.00m, "Meerkat"),
+            new BankAccount ("Pumba", 12.50m, "Warthog"),
+            new BankAccount ("Ed", 4.00m, "Hyena")
         };
 
         public IActionResult Index()
