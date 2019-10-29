@@ -1,5 +1,7 @@
 ﻿@model List<BankAccount>
-
+@{
+    int accountIndex = 0;
+    }
 @{
     ViewData["Title"] = "Show";
 }
@@ -10,6 +12,7 @@
                 <th>Account Holder</th>
                 <th>Balance</th>
                 <th>Animal Type</th>
+                <th>Index Position</th>
             </tr>
         </thead>
         <tbody>
@@ -19,6 +22,7 @@
                 <td>@account.Name</td>
                 <td>@(Math.Round(account.Balance, 2)) Twigs</td>
                 <td>@account.AnimalType</td>
+                <td>@(accountIndex++)</td>
             </tr>
             }
         </tbody>
