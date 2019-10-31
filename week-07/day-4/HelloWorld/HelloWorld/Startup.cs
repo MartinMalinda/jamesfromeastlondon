@@ -21,6 +21,7 @@ namespace HelloWorld
             services.AddTransient<ConsoleLoggerMiddleware>();
             services.AddTransient<Printer>();
             services.AddTransient<IColor, Red>();
+            services.AddTransient<UtilityService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

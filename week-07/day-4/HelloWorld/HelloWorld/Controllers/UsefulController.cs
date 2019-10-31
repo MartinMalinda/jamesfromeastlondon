@@ -12,7 +12,12 @@ namespace HelloWorld.Controllers
     
     public class UsefulController : Controller
     {
-        private UtilityService utilityServices;
+        private UtilityService utilityService;
+
+        public UsefulController(UtilityService utilityService)
+        {
+            this.utilityService = utilityService;
+        }
 
         // GET: /<controller>/
         public IActionResult Index()
@@ -20,9 +25,18 @@ namespace HelloWorld.Controllers
             return View();
         }
 
-        public IActionResult Colored(UtilityService utilityService)
+        [Route("/Colored")]
+        public IActionResult Colored()
         {
             ViewData["color"] = utilityService.RandomColor();
+            return View();
+        }
+
+        [Route("/Email")]
+        public IActionResult Email(string email)
+        {
+            ViewData["bool"] = utilityService.ValidateEmail(email);
+            ViewData["email"] = email;
             return View();
         }
     }

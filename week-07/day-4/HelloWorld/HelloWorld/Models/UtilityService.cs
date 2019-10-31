@@ -26,5 +26,14 @@ namespace HelloWorld.Models
         {
             return colors[random.Next(colors.Count)];
         }
+
+        public bool ValidateEmail(string email)
+        {
+            if (email.Contains('@') && email.Contains('.'))
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
