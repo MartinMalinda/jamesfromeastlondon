@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HelloWorld.Interfaces;
 using HelloWorld.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -19,6 +20,7 @@ namespace HelloWorld
             services.AddMvc();
             services.AddTransient<ConsoleLoggerMiddleware>();
             services.AddTransient<Printer>();
+            services.AddTransient<IColor, Red>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
