@@ -32,7 +32,12 @@ namespace HelloWorld
             }
 
             app.UseMiddleware<ConsoleLoggerMiddleware>();
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Useful}/{action=Index}/{id?}");
+            });
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World!");

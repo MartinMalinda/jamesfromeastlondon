@@ -9,6 +9,8 @@
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\Useful\" />
   </ItemGroup>
 
   <ItemGroup>
