@@ -22,6 +22,7 @@ namespace HelloWorld
             services.AddTransient<Printer>();
             services.AddTransient<IColor, Red>();
             services.AddTransient<UtilityService>();
+            services.AddSingleton<StudentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,7 +38,7 @@ namespace HelloWorld
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Useful}/{action=Index}/{id?}");
+                    template: "{controller=Gfa}/{action=Index}/{id?}");
             });
             app.Run(async (context) =>
             {

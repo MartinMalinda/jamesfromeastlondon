@@ -1,0 +1,12 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "Gfa";
+}
+
+@foreach (var student in @Model)
+{
+    <ul>
+        <li>@student</li>
+    </ul>
+}
