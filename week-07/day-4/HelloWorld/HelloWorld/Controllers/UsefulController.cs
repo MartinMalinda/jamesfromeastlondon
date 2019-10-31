@@ -39,5 +39,19 @@ namespace HelloWorld.Controllers
             ViewData["email"] = email;
             return View();
         }
+
+        [Route("/Encoder")]
+        public IActionResult Encoder(string text, int number)
+        {
+            ViewData["encoded"] = utilityService.CaesarEncoder(text, number);
+            return View();
+        }
+
+        [Route("/Decoder")]
+        public IActionResult Decoder(string text, int number)
+        {
+            ViewData["decoded"] = utilityService.CaesarDecoder(text, number);
+            return View();
+        }
     }
 }

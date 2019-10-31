@@ -4,8 +4,26 @@
 
 <a href="/Colored">Colored</a>
 
+<br /><br />
+
 <form method="get" action="/Email">
     <label for="email">Validate email:</label>
-    <input id="email" name="email" type="text" placeholder="Type here ...">
+    <input id="email" name="email" type="text" placeholder="Email here ...">
     <button type="submit">Check</button>
+</form>
+
+<form method="post" action="/Encoder">
+    <label for="text">Message to encode:</label>
+    <input id="text" name="text" type="text" placeholder="Text here ...">
+    <label for="number">Encode key:</label>
+    <input id="number" name="number" type="text" placeholder="Number here ...">
+    <button type="submit">Encode</button>
+</form>
+
+<form method="post" action="/Decoder">
+    <label for="text">Message to decode:</label>
+    <input id="text" name="text" type="text" placeholder="Encoded message here ...">
+    <label for="number">Decode key:</label>
+    <input id="number" name="number" type="text" placeholder="Number here ...">
+    <button type="submit">Decode</button>
 </form>
