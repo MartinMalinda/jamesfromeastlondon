@@ -43,14 +43,14 @@ namespace HelloWorld.Controllers
         [Route("/Encoder")]
         public IActionResult Encoder(string text, int number)
         {
-            ViewData["encoded"] = utilityService.CaesarEncoder(text, number);
+            ViewData["encoded"] = utilityService.Caesar(text, number);
             return View();
         }
 
         [Route("/Decoder")]
         public IActionResult Decoder(string text, int number)
         {
-            ViewData["decoded"] = utilityService.CaesarDecoder(text, number);
+            ViewData["decoded"] = utilityService.Caesar(text, -number);
             return View();
         }
     }
