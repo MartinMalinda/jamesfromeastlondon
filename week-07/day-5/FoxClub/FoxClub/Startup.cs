@@ -17,7 +17,7 @@ namespace FoxClub
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddTransient<FoxClubMiddleware>();
+            services.AddSingleton<FoxService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -27,7 +27,7 @@ namespace FoxClub
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseMiddleware<FoxClubMiddleware>();
+            app.UseMiddleware<FoxService>();
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {
