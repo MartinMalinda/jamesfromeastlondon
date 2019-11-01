@@ -20,11 +20,11 @@ namespace FoxClub.Controllers
         }
 
         // GET: /<controller>/
+        [HttpGet]
         [Route("")]
-        public IActionResult Index(string name)
+        public IActionResult Index(string name = "Mr. Fox")
         {
-            ViewData["name"] = name;
-            return View();
+            return View(foxService.GetFoxList(name));
         }
 
         [HttpGet]

@@ -1,5 +1,32 @@
-﻿<img src="~/images/greenfox.png">
+﻿@model List<FoxClub.Models.Fox>
 
-<p>This is @ViewData["name"]. Currently living on salad and water. He knows 0 tricks.</p>
+<a href="/Login">Login</a>
+<br />
+<br />
+
+<img src="~/images/greenfox.png">
+
+@foreach (var value in Model)
+{
+    <p>This is @value.Name. Currently living on @value.Food and @value.Drink. He knows @(value.ListOfTricks.Count().ToString()) tricks.</p>
+}
 
 <h1>Known tricks</h1>
+
+@foreach (var value in Model)
+{
+    @if (@value.ListOfTricks.Count() == 0)
+    {
+        <p>@value.Name is dumb. @value.Name doesn't know any tricks. You should teach @value.Name.</p>
+    }
+}
+
+@foreach (var value in Model)
+{
+    <ul>
+        @foreach (var trick in @value.ListOfTricks)
+        {
+            <li>@trick</li>
+        }
+    </ul>
+}
