@@ -1,0 +1,10 @@
+﻿<form method="get" action="">
+    <label for="check">Name</label>
+    <input id="check" name="checkname" type="text"/>
+    <button type="submit">Check Student</button>
+</form>
+
+@if (ViewData["query"].ToString()[0] != ' ')
+{
+    @ViewData["query"]
+}

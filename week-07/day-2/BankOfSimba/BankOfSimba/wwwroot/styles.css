@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 0.02em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table {
+    margin-top: 10vh;
+    width: 80vw;
+    text-align: left;
+}
+
+th, td {
+    margin: 20px 20px;
+    padding: 20px 20px; 
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.isKing {
+    background-color: gold;
+}
+
+form {
+    margin-top: 5vh;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+label {
+    margin-right: 5px;
+}
+
+input {
+    margin-right: 50px;
+    height: 2vh;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    border-style: none;
+    border-radius: 3px;
+    color: white;
+    background-color: skyblue;
+    width: 10vw;
+    height: 2vw;
+    margin-bottom: 2vh;
+}

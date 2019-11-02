@@ -1,0 +1,8 @@
+﻿@if (@ViewData["bool"].ToString() == "True")
+{
+    <p style="color:green">@ViewData["email"] is a valid email address</p>
+}
+else
+{
+	<p style="color:red">@ViewData["email"] is not a valid email address</p>
+}

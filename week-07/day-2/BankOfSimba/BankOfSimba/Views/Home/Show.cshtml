@@ -1,25 +1,46 @@
 ﻿@model List<BankAccount>
-
+@{
+    int accountIndex = 0;
+    }
 @{
     ViewData["Title"] = "Show";
 }
 
-@foreach (var account in @Model)
-{
-    <table>
-        <thead>
-            <tr>
-                <th>Account Holder</th>
-                <th>Balance</th>
-                <th>Animal Type</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
+<table>
+    <thead>
+        <tr>
+            <th>Account Holder</th>
+            <th>Balance</th>
+            <th>Animal Type</th>
+            <th>Index Position</th>
+            <th>Is King?</th>
+            <th>Good or Bad?</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var account in @Model)
+        {
+            <tr @if (account.IsKing) { <text>class="isKing"</text> } >
                 <td>@account.Name</td>
                 <td>@(Math.Round(account.Balance, 2)) Twigs</td>
                 <td>@account.AnimalType</td>
+                <td>@(accountIndex++)</td>
+                <td>@(account.IsKing ? "Yes" : "No")</td>
+                <td>@(account.AnimalType == "Hyena" ? "Bad one" : "Good one")</td>
             </tr>
-        </tbody>
-    </table>
-} 
+        }
+    </tbody>
+</table>
+
+<form method="post">
+    <section>
+        <label for="name">Name:</label>
+        <input id="name" name="name" type="text"/>
+        <label for="animalType">Animal Type:</label>
+        <input id="animalType" name="animalType" type="text"/>
+        <label for="isKing">Is King?</label>
+        <input id="isKing" name="isKing" type="checkbox"/>
+        <button type="submit" asp-controller="Home" asp-action="AddAccount">Add Account</button>
+    </section>
+    <button type="submit" asp-controller="Home" asp-action="RaiseBalance">Raise Balance</button>
+</form>

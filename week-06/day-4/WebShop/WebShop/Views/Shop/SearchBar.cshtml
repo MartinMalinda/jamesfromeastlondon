@@ -1,5 +1,50 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<ShopItem>
+
 @{
+    ViewData["Title"] = "MyShop";
 }
+
+<body>
+    <div class ='container'>
+        <header>
+            <a asp-controller="Shop" asp-action="Index"><h1>WebShop</h1></a>
+        </header>
+        <nav>
+            <button type="button"><a asp-controller="Shop" asp-action="OnlyAvailable">ONLY AVAILABLE</a></button>
+            <button type="button"><a asp-controller="Shop" asp-action="CheapestFirst">CHEAPEST FIRST</a></button>
+            <button type="button"><a asp-controller="Shop" asp-action="ContainsNike">CONTAINS NIKE</a></button>
+            <button type="button"><a asp-controller="Shop" asp-action="AverageStock">AVERAGE STOCK</a></button>
+            <button type="button"><a asp-controller="Shop" asp-action="MostExpensiveAvailable">MOST EXPENSIVE AVAILABLE</a></button>
+        </nav>
+        <section>
+            <form action="/search" method="POST">
+                <label for="search">Search for:</label>
+                <input id="search" name="search" type="text" placeholder="Type here ...">
+                <button type="submit">SEARCH</button>
+            </form>
+        </section>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Quantity of stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in @Model)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.Description</td>
+                            <td>@item.Price</td>
+                            <td>@item.QuantityOfStock</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>

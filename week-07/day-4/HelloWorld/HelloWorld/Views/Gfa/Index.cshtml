@@ -1,0 +1,18 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "Gfa";
+}
+
+@foreach (var student in @Model)
+{
+    <ul>
+        <li>@student</li>
+    </ul>
+}
+
+<h1>There are @ViewData["count"] students.</h1>
+
+<a href="/Gfa/List">List of Students</a>
+<a href="/Gfa/Add">Add Student</a>
+<a href="/Gfa/Check">Check Student</a>
